@@ -107,10 +107,6 @@ def copy_public_assets() -> None:
                 ignore=shutil.ignore_patterns(".DS_Store"),
             )
 
-    cname = ROOT / "CNAME"
-    if cname.exists():
-        shutil.copy2(cname, OUT / "CNAME")
-
     write_text(OUT / ".nojekyll", "")
 
 
