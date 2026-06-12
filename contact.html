@@ -1,17 +1,3 @@
-<?php
-$con = mysqli_connect("bdm269199292.my3w.com", "bdm269199292", "1y2w3dYWD");
-if (!$con) {
-    die('Could not connect: ' . mysqli_error());
-} else {
-    mysqli_query($con,"SET NAMES 'utf8'");
-    mysqli_select_db($con, "bdm269199292_db");
-    $query = "SELECT * FROM info";
-    $result = mysqli_query($con, $query);
-    $info = mysqli_fetch_assoc($result);
-    mysqli_close($con);
-}
-?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -72,7 +58,7 @@ if (!$con) {
                             <li><a href="services.html">案例</a></li>
 <!--                            <li><a href="about.html">团队简介</a></li>-->
 
-                            <li class="active"><a href="contact.php">联系我们</a></li>
+                            <li class="active"><a href="contact.html">联系我们</a></li>
                         </ul>
 
                     </div><!-- /.navbar-collapse -->
@@ -98,7 +84,7 @@ if (!$con) {
             <div class="col-xs-12">
                 <h4 class="company-introduction">公司简介</h4>
                 <p class="company-text">
-                    <?php echo $info['company_desc'] ?>
+                    湖州华宸装饰有限公司，一直秉承：“质量第一、信誉至上”的经营理念，专业从事室内外装修、设计服务。
                 </p>
             </div>
 
@@ -154,28 +140,28 @@ if (!$con) {
             <div class="touch-grids">
 
                 <div class="col-md-4 touch-grid">
-                    <h4>联系人： <?php echo $info['person']?></h4>
+                    <h4>联系人： 余经理</h4>
                 </div>
                 <div class="col-md-4 touch-grid">
-                    <h4> 手机号：<?php echo $info['phone'] ?></h4>
+                    <h4> 手机号：131-8520-5025</h4>
                 </div>
                 <div class="col-md-4 touch-grid">
-                    <h4>E-mail : <?php echo $info['mail'] ?></a></h4>
+                    <h4>E-mail : 309648094@qq.com</a></h4>
                 </div>
                 <br> <br>
                 <div class="col-md-4 touch-grid">
-                    <h4>传真 : <?php echo $info['fax'] ?></a></h4>
+                    <h4>传真 : </a></h4>
                 </div>
                 <div class="col-md-4 touch-grid">
-                    <h4>QQ : <?php echo $info['qq'] ?></a></h4>
+                    <h4>QQ : 309648094</a></h4>
                 </div>
                 <div class="col-md-4 touch-grid">
-                    <h4>电话 : <?php echo $info['mobile'] ?></a></h4>
+                    <h4>电话 : 131-8520-5025</a></h4>
                 </div>
                 <br> <br>
                 <div class="col-md-4 touch-grid site">
 
-                    <h4> 地址： <?php echo $info['address'] ?></h4>
+                    <h4> 地址： 浙江省湖州市吴兴区红星环球品牌中心北门三楼</h4>
                 </div>
                 <br> <br>
             </div>
